@@ -26,10 +26,16 @@ node Root(TREE T);
 void Initialize(TREE T, int values[]);
 void MakeNULL(TREE T);
 
+//SINCE WITHIN THIS IMPLEMENTATION, WE ARE ABLE TO DISTINGQUISH ALREADY THE LEFTMOST AND
+//RIGHTMOST NODES, WE CAN ALSO DO THE PREORDER, INORDER, AND POSTORDER TRAVERSALS:)
+void Prefix(TREE T, node root);
+void Infix(TREE T);
+void Postfix(TREE T);
+
 int main()
 {
     TREE myTree;
-    int myArr[] = {ROOT, 0, 0, 0, 1, 2, 2, 6, 6, 2};
+    int myArr[] = {ROOT, 0, 0, 0, 1, 2, 2, 6, 6, 3};
 
     //INITIALIZE MY TREE
     Initialize(myTree, myArr);
@@ -106,3 +112,12 @@ void MakeNULL(TREE T) {
         T[x] = DNS;
     }
 }
+
+//THE TRAVERSAL FUNCTIONS START HERE
+void Prefix(TREE T, node root) {
+    if (root != 10) {
+        printf("%d ", T[root]);
+    }
+}
+void Infix(TREE T);
+void Postfix(TREE T);
